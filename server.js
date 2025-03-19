@@ -5,10 +5,10 @@ var http = require('http');
 var fs = require('fs');
 
 //store port
-var port = 1337;
+const port = 1337;
 
 //store the directory name
-var dirname = '/Users/rileymaguire/Desktop/Classes/csc372/labs/lab7_node';
+// var dirname = '/Users/rileymaguire/Desktop/Classes/csc372/labs/lab7_node';
 
 //function to trad file located at path passed in
 function serveStaticFile(res, path, contentType, responseCode){
@@ -18,7 +18,7 @@ function serveStaticFile(res, path, contentType, responseCode){
     }
 
     //try to read file
-    fs.readFile(dirname + path, function(err,data) {
+    fs.readFile(__dirname + path, function(err,data) {
         //if there is an error
         if(err){
             //internal server error
