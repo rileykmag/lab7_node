@@ -71,7 +71,7 @@ http.createServer(function(req, res){
         
         // serve the css file
         case '/css/style.css':
-            serveStaticFile(res, '/public/css/style.css', 'text/css');›
+            serveStaticFile(res, '/public/css/style.css', 'text/css');
             break;
 
         // go through each img
